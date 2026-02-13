@@ -8,20 +8,39 @@
 </head>
 <body>
   <header class="site-header">
-    <div class="top-bar"><img src="images/logo.jpg" alt="KIKAI Girls High School logo" class="logo" /><div class="brand"><h1>KIKAI Girls High School</h1><p>Official contacts and location details</p></div></div>
-    <div class="nav-wrap"><nav class="site-nav" aria-label="Main navigation"><button id="navToggle" class="nav-toggle" aria-expanded="false" aria-controls="navLinks">Menu</button><ul id="navLinks" class="nav-links"><li><a href="index.html">Home</a></li><li><a href="about.html">About the School</a></li><li><a href="academics.html">Academics</a></li><li><a href="admissions.html">Admissions</a></li><li><a href="school-life.html">School Life</a></li><li><a href="news.html">News</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="library-elearning.html">Library & E-Learning</a></li><li><a href="downloads.html">Downloads</a></li><li><a href="contact.html">Contact</a></li></ul></nav></div>
+    <div class="top-bar"><img src="images/logo.jpg" alt="KIKAI Girls High School logo" class="logo" /><div class="brand"><h1>KIKAI Girls High School</h1><p>Official contacts and communication channels</p></div></div>
+    <div class="nav-wrap"><nav class="site-nav" aria-label="Main navigation"><button id="navToggle" class="nav-toggle" aria-expanded="false" aria-controls="navLinks">Menu</button><ul id="navLinks" class="nav-links"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="academics.html">Academics</a></li><li><a href="news.html">News & Events</a></li><li><a href="school-life.html">School Life</a></li><li><a href="resources.html">Resources</a></li><li><a href="contact.html">Contact</a></li></ul></nav></div>
   </header>
-
   <main class="container">
     <section class="page-intro"><h2 class="page-title">Contact the School</h2><p>For official inquiries, use the contacts below during office hours.</p></section>
     <section class="grid cols-2">
       <article class="card"><h3>Contact Information</h3><p><strong>Phone:</strong> <a href="tel:+254723958346">+254 723 958 346</a></p><p><strong>Email:</strong> <a href="mailto:info@kikaigirls.edu">info@kikaigirls.edu</a></p><p><strong>Postal Address:</strong> P.O. Box 35-50202, Bungoma (Chwele), Kenya</p></article>
       <article class="card"><h3>Office Hours</h3><p>Monday - Friday: 8:00 AM - 5:00 PM</p><p>Saturday: 8:30 AM - 1:00 PM</p><p>Sunday and Public Holidays: Closed</p></article>
-      <article class="card"><h3>School Map</h3><p>Approximate location map for visitors and parents.</p><iframe class="map-embed" title="KIKAI Girls High School location map" loading="lazy" src="https://maps.google.com/maps?q=Chwele%20Bungoma%20Kenya&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe><p><a href="https://maps.google.com/?q=Chwele+Bungoma+Kenya" target="_blank" rel="noopener">Open full map</a></p></article>
+      <article class="card"><h3>School Map</h3><iframe class="map-embed" title="KIKAI Girls High School location map" loading="lazy" src="https://maps.google.com/maps?q=Chwele%20Bungoma%20Kenya&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe></article>
       <article class="card"><h3>Department Contacts</h3><p>Admissions: admissions@kikaigirls.edu</p><p>Academics: academics@kikaigirls.edu</p><p>ICT Support: ict@kikaigirls.edu</p></article>
     </section>
-  </main>
 
+    <section class="article" aria-label="Contact form">
+      <h3>Send a Message</h3>
+      <form id="contactForm" action="#" method="post" novalidate>
+        <div class="form-grid">
+          <label for="contactName">Full Name</label>
+          <input id="contactName" name="name" type="text" required />
+
+          <label for="contactEmail">Email Address</label>
+          <input id="contactEmail" name="email" type="email" required />
+
+          <label for="contactSubject">Subject</label>
+          <input id="contactSubject" name="subject" type="text" required />
+
+          <label for="contactMessage">Message</label>
+          <textarea id="contactMessage" name="message" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="btn primary">Send Message</button>
+        <p id="contactFeedback" class="meta" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
   <footer class="site-footer"><div class="footer-inner"><p>&copy; 2026 KIKAI Girls High School</p></div></footer>
   <script src="js/script.js"></script>
 </body>

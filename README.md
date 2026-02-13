@@ -1,108 +1,110 @@
 # KIKAI Girls High School Website
 
-A static, frontend-only, magazine-style school website built with HTML, CSS, and Vanilla JavaScript.
+A static institutional website for KIKAI Girls High School, built with HTML, CSS, and Vanilla JavaScript.
 
-## Project Direction
+## Project Purpose
 
-This project has been refactored from a portal-style prototype into a public information website.
+This project delivers a professional, public-facing school website inspired by institutional information architecture patterns used by higher education websites.
 
-It now works as:
-- A school magazine
-- A digital notice board
+It is designed as:
+- An institutional information portal
+- A school news and events publication
 - A parent and student information hub
 
-## Important Scope
+## Scope
 
 - Frontend only
 - No backend
-- No databases
-- No authentication
-- No account or portal system
+- No database
+- No authentication/login system
+- No user account persistence
 
 ## Target Audience
 
 - Parents and guardians
 - Current and prospective students
-- School staff
-- Community visitors and stakeholders
+- School administrators and staff
+- Community stakeholders and education partners
 
-## Website Sections
+## Content Flow and Site Sections
 
-- Home (`index.html`)
-- About the School (`about.html`)
-- Academics (`academics.html`)
-- Admissions (`admissions.html`)
-- School Life (`school-life.html`)
-- News & Announcements (`news.html`)
-- Gallery (`gallery.html`)
-- Library & E-Learning (`library-elearning.html`)
-- Downloads (`downloads.html`)
-- Contact (`contact.html`)
-
-Additional static article pages are linked from the News section.
+- `index.html` - Home (hero, mission/vision snippets, carousel, highlights)
+- `about.html` - About (history, values, governance)
+- `academics.html` - Academics (programmes, departments, calendar overview)
+- `news.html` - News & Events (article cards, filtering, expandable events)
+- `school-life.html` - School Life (clubs, sports, extracurriculars)
+- `resources.html` - Resources (library content, downloads, e-learning links)
+- `contact.html` - Contact (contacts, map embed, frontend-only form stub)
+- `gallery.html` - Gallery (image collections with captions and lightbox)
+- `article-*.html` - Full article detail pages
 
 ## Frontend Features
 
-- Magazine-style article cards and highlight blocks
-- Mobile-first responsive layout (Grid + Flexbox)
-- Semantic content structure (`section`, `article`, `figure`)
 - Mobile navigation toggle
-- News filtering by category (content-only)
-- Accessible image gallery lightbox
-- Keyboard support for close interactions (`Esc` in lightbox)
+- Active page navigation highlighting
+- News category filtering
+- Homepage news highlights carousel
+- Expand/collapse event items
+- Accessible gallery lightbox
+- Contact form stub interaction (no backend submission)
+- Responsive layout with CSS Grid/Flexbox
 
-## Removed Legacy Features
+## Folder Structure
 
-The following legacy files/features were removed to match the new information architecture:
-- Student registration and login pages
-- Dashboard pages
-- Authentication logic
-- `localStorage` user/account handling
-- Portal/account navigation concepts
+```text
+kikaiwebsite/
+├── index.html
+├── about.html
+├── academics.html
+├── news.html
+├── school-life.html
+├── resources.html
+├── contact.html
+├── gallery.html
+├── article-*.html
+├── css/
+│   └── style.css
+├── js/
+│   └── script.js
+└── images/
+```
 
-## Running Locally
+## Deployment
 
-1. Clone or download the project.
-2. Open the folder in your editor.
-3. Open `index.html` directly in a browser.
-
-Optional local static server:
+### Local preview
 
 ```bash
 python -m http.server 8000
 ```
 
-Then open: `http://localhost:8000`
-
-## Deployment
+Open: `http://localhost:8000`
 
 ### GitHub Pages
 
-1. Push to GitHub.
-2. Go to `Settings` > `Pages`.
+1. Push repository to GitHub.
+2. In repository settings, open `Pages`.
 3. Select `Deploy from a branch`.
-4. Choose `main` and `/ (root)`.
-5. Save and use the generated URL.
+4. Choose `main` and root `/`.
+5. Save and open generated site URL.
 
 ### Netlify
 
-1. Import the GitHub repository into Netlify.
-2. Build command: leave empty.
-3. Publish directory: `/` (root).
+1. Import repository into Netlify.
+2. Build command: none.
+3. Publish directory: root `/`.
 4. Deploy.
 
-## Future Enhancements (Optional)
+## UX Rationale
 
-Not implemented in this version:
-- CMS integration for easy article publishing
-- Backend API for dynamic news and events
-- Search and tagging for archive content
-- Admin editorial workflow
+The site emphasizes institutional trust and content discoverability by:
+- Grouping information by user intent (about, academics, events, resources, contact)
+- Using card-based summaries for quick scanning
+- Providing consistent navigation and content hierarchy
+- Keeping interactions lightweight and accessible
 
-## Academic Evaluation Notes
+## Future Frontend-Only Enhancements
 
-This project is suitable for academic frontend review because it demonstrates:
-- Information architecture refactoring
-- Content-focused UX design
-- Responsive, accessible static pages
-- Clear separation of structure (HTML), style (CSS), and interactions (JS)
+- Multi-language support toggle
+- Search and tag filtering across news posts
+- Homepage featured announcements ticker
+- Static yearly archive pages for institutional records

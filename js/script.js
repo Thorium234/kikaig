@@ -40,10 +40,88 @@ function initNewsFilter() {
 
       cards.forEach(function (card) {
         const category = card.getAttribute('data-category');
-        const show = selected === 'all' || category === selected;
-        card.style.display = show ? '' : 'none';
+        card.style.display = selected === 'all' || category === selected ? '' : 'none';
       });
     });
+  });
+}
+
+function initCarousel() {
+  const slides = document.querySelectorAll('.carousel-slide');
+  const prevBtn = document.getElementById('carouselPrev');
+  const nextBtn = document.getElementById('carouselNext');
+
+  if (!slides.length || !prevBtn || !nextBtn) {
+    return;
+  }
+
+  let current = 0;
+
+  function render() {
+    slides.forEach(function (slide, index) {
+      slide.classList.toggle('active', index === current);
+    });
+  }
+
+  prevBtn.addEventListener('click', function () {
+    current = (current - 1 + slides.length) % slides.length;
+    render();
+  });
+
+  nextBtn.addEventListener('click', function () {
+    current = (current + 1) % slides.length;
+    render();
+  });
+
+  setInterval(function () {
+    current = (current + 1) % slides.length;
+    render();
+  }, 5500);
+
+  render();
+}
+
+function initEventAccordion() {
+  const toggles = document.querySelectorAll('.event-toggle');
+  if (!toggles.length) {
+    return;
+  }
+
+  toggles.forEach(function (toggle) {
+    toggle.addEventListener('click', function () {
+      const body = toggle.nextElementSibling;
+      const expanded = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!expanded));
+      if (body) {
+        body.classList.toggle('hidden');
+      }
+    });
+  });
+}
+
+function initContactFormStub() {
+  const form = document.getElementById('contactForm');
+  const feedback = document.getElementById('contactFeedback');
+
+  if (!form || !feedback) {
+    return;
+  }
+
+  form.addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    const name = document.getElementById('contactName');
+    const email = document.getElementById('contactEmail');
+    const subject = document.getElementById('contactSubject');
+    const message = document.getElementById('contactMessage');
+
+    if (!name.value.trim() || !email.value.trim() || !subject.value.trim() || !message.value.trim()) {
+      feedback.textContent = 'Please complete all fields before submitting the form.';
+      return;
+    }
+
+    feedback.textContent = 'Thank you. Your message has been captured on this demo interface. Please use official phone/email for urgent issues.';
+    form.reset();
   });
 }
 
@@ -74,7 +152,6 @@ function initGalleryLightbox() {
   });
 
   closeButton.addEventListener('click', closeLightbox);
-
   lightbox.addEventListener('click', function (event) {
     if (event.target === lightbox) {
       closeLightbox();
@@ -92,5 +169,8 @@ document.addEventListener('DOMContentLoaded', function () {
   initNavToggle();
   setActiveNavLink();
   initNewsFilter();
+  initCarousel();
+  initEventAccordion();
+  initContactFormStub();
   initGalleryLightbox();
 });
