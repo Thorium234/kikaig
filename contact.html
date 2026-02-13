@@ -3,58 +3,26 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact Us - KIKAI GIRLS HIGH SCHOOL</title>
+  <title>Contact | KIKAI Girls High School</title>
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <header>
-    <img src="images/logo.jpg" alt="Kikai Girls High School logo" class="logo" loading="eager" />
-    <h1>Contact KIKAI GIRLS HIGH SCHOOL</h1>
-    <nav aria-label="Main navigation">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-        <li><a href="portal.html">Student &amp; Staff Portal</a></li>
-        <li><a href="elearning.html">E-learning</a></li>
-        <li><a href="library.html">Library</a></li>
-        <li><a href="#" onclick="event.preventDefault(); toggleChat();">Help</a></li>
-      </ul>
-    </nav>
+  <header class="site-header">
+    <div class="top-bar"><img src="images/logo.jpg" alt="KIKAI Girls High School logo" class="logo" /><div class="brand"><h1>KIKAI Girls High School</h1><p>Official contacts and location details</p></div></div>
+    <div class="nav-wrap"><nav class="site-nav" aria-label="Main navigation"><button id="navToggle" class="nav-toggle" aria-expanded="false" aria-controls="navLinks">Menu</button><ul id="navLinks" class="nav-links"><li><a href="index.html">Home</a></li><li><a href="about.html">About the School</a></li><li><a href="academics.html">Academics</a></li><li><a href="admissions.html">Admissions</a></li><li><a href="school-life.html">School Life</a></li><li><a href="news.html">News</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="library-elearning.html">Library & E-Learning</a></li><li><a href="downloads.html">Downloads</a></li><li><a href="contact.html">Contact</a></li></ul></nav></div>
   </header>
 
-  <main class="stack">
-    <section class="panel">
-      <h2>Get in Touch</h2>
-      <p>For admissions, reporting, academics, or general questions, use the official contacts below.</p>
-      <p><strong>Phone:</strong> <a href="tel:+254723958346">+254 723 958 346</a></p>
-      <p><strong>Email:</strong> <a href="mailto:info@kikaigirls.edu">info@kikaigirls.edu</a></p>
-      <p><strong>Address:</strong> P.O. Box 35-50202, Bungoma (Chwele), Kenya</p>
-    </section>
-
-    <section class="quick-links" aria-label="Contact departments">
-      <article class="panel">
-        <h3>Admissions Office</h3>
-        <p>Monday - Friday: 8:00 AM to 4:30 PM</p>
-      </article>
-      <article class="panel">
-        <h3>ICT Support Desk</h3>
-        <p>Help with portal login, account setup, and digital resources.</p>
-      </article>
+  <main class="container">
+    <section class="page-intro"><h2 class="page-title">Contact the School</h2><p>For official inquiries, use the contacts below during office hours.</p></section>
+    <section class="grid cols-2">
+      <article class="card"><h3>Contact Information</h3><p><strong>Phone:</strong> <a href="tel:+254723958346">+254 723 958 346</a></p><p><strong>Email:</strong> <a href="mailto:info@kikaigirls.edu">info@kikaigirls.edu</a></p><p><strong>Postal Address:</strong> P.O. Box 35-50202, Bungoma (Chwele), Kenya</p></article>
+      <article class="card"><h3>Office Hours</h3><p>Monday - Friday: 8:00 AM - 5:00 PM</p><p>Saturday: 8:30 AM - 1:00 PM</p><p>Sunday and Public Holidays: Closed</p></article>
+      <article class="card"><h3>School Map</h3><p>This section can be updated with an embedded map link for easier navigation.</p><p><a href="https://maps.google.com" target="_blank" rel="noopener">Open map service</a></p></article>
+      <article class="card"><h3>Department Contacts</h3><p>Admissions: admissions@kikaigirls.edu</p><p>Academics: academics@kikaigirls.edu</p><p>ICT Support: ict@kikaigirls.edu</p></article>
     </section>
   </main>
 
-  <div id="chatbot" class="chatbox hidden" role="dialog" aria-label="School help chat">
-    <p>Need assistance? We are here to help.</p>
-    <label class="visually-hidden" for="chatInputContact">Type a question</label>
-    <input id="chatInputContact" type="text" placeholder="Type a question..." />
-  </div>
-
-  <footer>
-    <img src="images/logo.jpg" alt="Kikai Girls High School logo" class="logo" loading="lazy" />
-    <p>&copy; 2025 KIKAI GIRLS HIGH SCHOOL</p>
-  </footer>
-
+  <footer class="site-footer"><div class="footer-inner"><p>&copy; 2026 KIKAI Girls High School</p></div></footer>
   <script src="js/script.js"></script>
 </body>
 </html>

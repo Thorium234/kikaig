@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery | KIKAI Girls High School</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="top-bar"><img src="images/logo.jpg" alt="KIKAI Girls High School logo" class="logo" /><div class="brand"><h1>KIKAI Girls High School</h1><p>School events and life in pictures</p></div></div>
+    <div class="nav-wrap"><nav class="site-nav" aria-label="Main navigation"><button id="navToggle" class="nav-toggle" aria-expanded="false" aria-controls="navLinks">Menu</button><ul id="navLinks" class="nav-links"><li><a href="index.html">Home</a></li><li><a href="about.html">About the School</a></li><li><a href="academics.html">Academics</a></li><li><a href="admissions.html">Admissions</a></li><li><a href="school-life.html">School Life</a></li><li><a href="news.html">News</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="library-elearning.html">Library & E-Learning</a></li><li><a href="downloads.html">Downloads</a></li><li><a href="contact.html">Contact</a></li></ul></nav></div>
+  </header>
+
+  <main class="container">
+    <section class="page-intro"><h2 class="page-title">Gallery</h2><p>Selected moments from academics, sports, and school activities.</p></section>
+    <section class="gallery-grid">
+      <figure class="gallery-item"><img src="images/staff.jpg" alt="Staff and students during assembly" data-caption="Staff and students during opening assembly." /><figcaption>Opening assembly with teachers and learners.</figcaption></figure>
+      <figure class="gallery-item"><img src="images/celebration.jpg" alt="Students celebrating achievement" data-caption="Students celebrating academic and co-curricular success." /><figcaption>Celebrating excellent student performance.</figcaption></figure>
+      <figure class="gallery-item"><img src="images/handball.jpg" alt="Handball team in practice session" data-caption="Handball team training session ahead of county fixtures." /><figcaption>Sports training session on school grounds.</figcaption></figure>
+      <figure class="gallery-item"><img src="images/week.jpg" alt="School week student activities" data-caption="Students engaged in school week presentations." /><figcaption>School week activities and presentations.</figcaption></figure>
+      <figure class="gallery-item"><img src="images/rteam.jpg" alt="Debate and leadership team" data-caption="Debate and leadership participants during workshop." /><figcaption>Leadership and debate workshop highlights.</figcaption></figure>
+      <figure class="gallery-item"><img src="images/afr.jpg" alt="Cultural and community event" data-caption="Cultural event promoting teamwork and creativity." /><figcaption>Community and cultural participation.</figcaption></figure>
+    </section>
+  </main>
+
+  <div id="lightbox" class="lightbox" aria-hidden="true">
+    <button id="lightboxClose" class="lightbox-close" aria-label="Close image viewer">Close</button>
+    <div class="lightbox-content">
+      <img id="lightboxImage" src="" alt="Expanded gallery preview" />
+      <p id="lightboxCaption" class="lightbox-caption"></p>
+    </div>
+  </div>
+
+  <footer class="site-footer"><div class="footer-inner"><p>&copy; 2026 KIKAI Girls High School</p></div></footer>
+  <script src="js/script.js"></script>
+</body>
+</html>

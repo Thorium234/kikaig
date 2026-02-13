@@ -3,109 +3,103 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>KIKAI GIRLS HIGH SCHOOL</title>
+  <title>KIKAI Girls High School | Home</title>
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <header>
-    <img src="images/logo.jpg" alt="Kikai Girls High School logo" class="logo" loading="eager" />
-    <h1>KIKAI GIRLS HIGH SCHOOL</h1>
-    <nav aria-label="Main navigation">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-        <li><a href="portal.html">Student &amp; Staff Portal</a></li>
-        <li><a href="elearning.html">E-learning</a></li>
-        <li><a href="library.html">Library</a></li>
-        <li><a href="school-details.html">History | News</a></li>
-      </ul>
-    </nav>
+  <header class="site-header">
+    <div class="top-bar">
+      <img src="images/logo.jpg" alt="KIKAI Girls High School logo" class="logo" />
+      <div class="brand">
+        <h1>KIKAI Girls High School</h1>
+        <p>Motto: Knowledge, Discipline, Excellence</p>
+      </div>
+    </div>
+    <div class="nav-wrap">
+      <nav class="site-nav" aria-label="Main navigation">
+        <button id="navToggle" class="nav-toggle" aria-expanded="false" aria-controls="navLinks">Menu</button>
+        <ul id="navLinks" class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About the School</a></li>
+          <li><a href="academics.html">Academics</a></li>
+          <li><a href="admissions.html">Admissions</a></li>
+          <li><a href="school-life.html">School Life</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="library-elearning.html">Library & E-Learning</a></li>
+          <li><a href="downloads.html">Downloads</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <main class="stack">
-    <section class="hero panel">
-      <div class="image-container">
-        <img class="school-phot" src="images/staff.jpg" alt="Kikai Girls High School students and staff" loading="eager" />
+  <main class="container">
+    <section class="hero">
+      <div class="hero-media">
+        <img src="images/staff.jpg" alt="KIKAI Girls students and teachers during assembly" />
       </div>
-      <h2>Welcome to KIKAI Girls High School</h2>
-      <p class="hero-subtitle">KIKAI Girls High School provides quality secondary education focused on academic excellence, discipline, mentorship, and leadership development for every learner.</p>
-      <div class="cta-row">
-        <a class="btn-link" href="portal.html">Student Portal Access</a>
-        <a class="btn-link secondary" href="contact.html">Admissions & Contact</a>
+      <div class="hero-content">
+        <p class="kicker">School Magazine</p>
+        <h2>Building Future Women Leaders Through Education and Character</h2>
+        <p>KIKAI Girls High School is a public information hub for parents, students, alumni, and the community. Stay informed about school programs, achievements, academics, and upcoming events.</p>
+        <p class="meta">Updated for Term 1, 2026</p>
+        <div class="cta-row">
+          <a class="btn primary" href="news.html">Read Latest News</a>
+          <a class="btn" href="admissions.html">View Admission Requirements</a>
+        </div>
       </div>
     </section>
 
-    <section class="quick-links" aria-label="Important school information">
-      <article class="panel">
-        <span class="badge">Announcements</span>
-        <h3>Latest Notices</h3>
-        <ul>
-          <li>CAT 1 assessment window: 24-28 February 2026.</li>
-          <li>Parents briefing forum: 6 March 2026, 10:00 AM.</li>
-          <li>Clubs and societies registration closes on 20 February 2026.</li>
-        </ul>
+    <section class="grid cols-3" aria-label="Home highlights">
+      <article class="card">
+        <span class="badge">Latest News</span>
+        <h3>Science Week Showcase</h3>
+        <p>Students presented practical innovations in chemistry and agriculture during this term's science showcase.</p>
+        <a href="news.html">Read more</a>
       </article>
-
-      <article class="panel">
-        <span class="badge">Departments</span>
-        <h3>Academic Departments</h3>
-        <ul>
-          <li>Sciences: Biology, Chemistry, Physics</li>
-          <li>Mathematics and Business Studies</li>
-          <li>Languages: English, Kiswahili, Literature</li>
-          <li>Humanities: History, Geography, CRE</li>
-        </ul>
+      <article class="card">
+        <span class="badge">Achievement</span>
+        <h3>Regional Debate Finalists</h3>
+        <p>The debate team reached the regional finals, representing the school with confidence and discipline.</p>
+        <a href="school-life.html">Explore school life</a>
       </article>
-
-      <article class="panel">
-        <span class="badge">Leadership</span>
-        <h3>Principal's Message</h3>
-        <p>Our mission is to nurture confident, responsible, and high-achieving young women through excellent teaching and strong guidance.</p>
-        <p class="small-text">We welcome parents and guardians to partner with us in building student success.</p>
+      <article class="card">
+        <span class="badge">Notice</span>
+        <h3>Parent Consultation Day</h3>
+        <p>Parent-teacher consultation is scheduled for 6 March 2026. Visit the News page for details.</p>
+        <a href="news.html">See announcement</a>
       </article>
+    </section>
 
-      <article class="panel">
-        <span class="badge">Quick Facts</span>
-        <h3>School Snapshot</h3>
-        <ul>
-          <li>Registered students across lower and upper forms</li>
-          <li>Experienced teaching and support staff</li>
-          <li>Active sports, clubs, and mentorship programs</li>
-        </ul>
+    <section class="news-grid" aria-label="Featured stories">
+      <article class="news-card">
+        <img src="images/celebration.jpg" alt="Students celebrating after academic awards" />
+        <div class="news-body">
+          <p class="article-meta">15 February 2026 | Academics</p>
+          <h3>Academic Awards Ceremony Highlights</h3>
+          <p>Top-performing students were recognized for outstanding performance and consistency across departments.</p>
+          <a href="article-awards-2026.html">Continue reading</a>
+        </div>
       </article>
-
-      <article class="panel">
-        <span class="badge">Downloads</span>
-        <h3>Important Documents</h3>
-        <ul>
-          <li><a href="#" aria-label="Download school rules PDF">School Rules (PDF)</a></li>
-          <li><a href="#" aria-label="Download fee structure PDF">Fee Structure (PDF)</a></li>
-          <li><a href="#" aria-label="Download academic calendar PDF">Academic Calendar (PDF)</a></li>
-        </ul>
-      </article>
-
-      <article class="panel">
-        <span class="badge">Support</span>
-        <h3>Need Assistance?</h3>
-        <p>For admission, portal, or academic questions, please contact the school office during working hours.</p>
-        <div class="cta-row">
-          <a class="btn-link" href="contact.html">Contact Office</a>
-          <a class="btn-link secondary" href="std-registor.html">New Student Registration</a>
+      <article class="news-card">
+        <img src="images/handball.jpg" alt="School handball team during training" />
+        <div class="news-body">
+          <p class="article-meta">10 February 2026 | Sports</p>
+          <h3>Handball Team Begins County Preparations</h3>
+          <p>Coaches and students have launched a structured training plan ahead of county-level competitions.</p>
+          <a href="article-handball-camp.html">Continue reading</a>
         </div>
       </article>
     </section>
   </main>
 
-  <div id="chatbot" class="chatbox hidden" role="dialog" aria-label="School help chat">
-    <p>Hello, how can we assist you today?</p>
-    <label class="visually-hidden" for="chatInputHome">Ask a question</label>
-    <input id="chatInputHome" type="text" placeholder="Ask something..." />
-  </div>
-
-  <footer>
-    <img src="images/logo.jpg" alt="Kikai Girls High School logo" class="logo" loading="lazy" />
-    <p>&copy; 2025 KIKAI GIRLS HIGH SCHOOL. All Rights Reserved.</p>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p><strong>KIKAI Girls High School</strong> | P.O. Box 35-50202, Bungoma (Chwele), Kenya</p>
+      <p>Phone: +254 723 958 346 | Email: info@kikaigirls.edu</p>
+      <p>&copy; 2026 KIKAI Girls High School. All rights reserved.</p>
+    </div>
   </footer>
 
   <script src="js/script.js"></script>

@@ -1,116 +1,108 @@
 # KIKAI Girls High School Website
 
-A static multi-page school website for **KIKAI GIRLS HIGH SCHOOL** built with plain HTML, CSS, and JavaScript.
+A static, frontend-only, magazine-style school website built with HTML, CSS, and Vanilla JavaScript.
 
-## Project Overview
+## Project Direction
 
-This project provides:
-- A public-facing school website (`Home`, `About`, `Contact`, `E-learning`, `Library`, `History | News`).
-- A basic student portal flow (`Registration` -> `Login` -> `Dashboard`) using browser `localStorage`.
-- Shared global styling and JavaScript across pages.
+This project has been refactored from a portal-style prototype into a public information website.
 
-No build tools or backend services are required.
+It now works as:
+- A school magazine
+- A digital notice board
+- A parent and student information hub
 
-## Tech Stack
+## Important Scope
 
-- HTML5
-- CSS3
-- Vanilla JavaScript
-- Browser `localStorage` for demo authentication/storage
+- Frontend only
+- No backend
+- No databases
+- No authentication
+- No account or portal system
 
-## Folder Structure
+## Target Audience
 
-```text
-kikaiwebsite/
-├── index.html
-├── about.html
-├── contact.html
-├── portal.html
-├── elearning.html
-├── library.html
-├── school-details.html
-├── std-registor.html
-├── std-login.html
-├── dashboard.html
-├── css/
-│   └── style.css
-├── js/
-│   └── script.js
-└── images/
-    └── (site images and logo)
-```
+- Parents and guardians
+- Current and prospective students
+- School staff
+- Community visitors and stakeholders
 
-## Pages and Behavior
+## Website Sections
 
-- `index.html`: Landing page with school branding and navigation.
-- `about.html`: Mission, vision, and school description.
-- `contact.html`: Contact details (phone, email, address).
-- `portal.html`: Entry page linking to student registration/login routes.
-- `std-registor.html`: Student registration form.
-  - Calls `register()` in `js/script.js`.
-  - Saves `{ name, admission number, stream }` to `localStorage` under key pattern `student_<admission_number>`.
-  - Redirects to `std-login.html`.
-- `std-login.html`: Student login form.
-  - Calls `login()` in `js/script.js`.
-  - Looks up `student_<admission_number>` in `localStorage`.
-  - Redirects to `dashboard.html` when found.
-- `dashboard.html`: Student dashboard template with placeholder academic/account data.
-- `elearning.html`: Placeholder for e-learning content.
-- `library.html`: Placeholder links for revision resources.
-- `school-details.html`: Image/news-style gallery with repeated school-highlight sections.
+- Home (`index.html`)
+- About the School (`about.html`)
+- Academics (`academics.html`)
+- Admissions (`admissions.html`)
+- School Life (`school-life.html`)
+- News & Announcements (`news.html`)
+- Gallery (`gallery.html`)
+- Library & E-Learning (`library-elearning.html`)
+- Downloads (`downloads.html`)
+- Contact (`contact.html`)
+
+Additional static article pages are linked from the News section.
+
+## Frontend Features
+
+- Magazine-style article cards and highlight blocks
+- Mobile-first responsive layout (Grid + Flexbox)
+- Semantic content structure (`section`, `article`, `figure`)
+- Mobile navigation toggle
+- News filtering by category (content-only)
+- Accessible image gallery lightbox
+- Keyboard support for close interactions (`Esc` in lightbox)
+
+## Removed Legacy Features
+
+The following legacy files/features were removed to match the new information architecture:
+- Student registration and login pages
+- Dashboard pages
+- Authentication logic
+- `localStorage` user/account handling
+- Portal/account navigation concepts
 
 ## Running Locally
 
-Because this is a static site, open `index.html` directly in a browser, or use a local server.
+1. Clone or download the project.
+2. Open the folder in your editor.
+3. Open `index.html` directly in a browser.
 
-### Option 1: Open directly
-
-- Double-click `index.html`.
-
-### Option 2: Use a lightweight local server (recommended)
-
-From the project root:
+Optional local static server:
 
 ```bash
-python3 -m http.server 8000
+python -m http.server 8000
 ```
 
-Then visit:
+Then open: `http://localhost:8000`
 
-- `http://localhost:8000/index.html`
+## Deployment
 
-## Shared JavaScript
+### GitHub Pages
 
-`js/script.js` currently contains:
-- `toggleChat()` to show/hide the chatbot UI container.
-- `register()` for student signup and storage.
-- `login()` for student admission-number login.
+1. Push to GitHub.
+2. Go to `Settings` > `Pages`.
+3. Select `Deploy from a branch`.
+4. Choose `main` and `/ (root)`.
+5. Save and use the generated URL.
 
-## Shared Styles
+### Netlify
 
-`css/style.css` defines:
-- Global page/header/footer styling
-- Navigation layout
-- Image container and gallery classes
-- Form styling for registration/login
-- Chatbox UI styling
+1. Import the GitHub repository into Netlify.
+2. Build command: leave empty.
+3. Publish directory: `/` (root).
+4. Deploy.
 
-## Current Limitations / Notes
+## Future Enhancements (Optional)
 
-- `portal.html` starts with an extra text token (`html`) before the doctype.
-- `dashboard.html` script references `regName`/`egAdm` storage IDs that are not aligned with the keys saved by `register()`.
-- Authentication is client-side only (`localStorage`) and not secure for production use.
-- Several portal/library/e-learning areas are placeholders and need backend integration for real data.
-- Some copy and spelling can be refined for production polish.
+Not implemented in this version:
+- CMS integration for easy article publishing
+- Backend API for dynamic news and events
+- Search and tagging for archive content
+- Admin editorial workflow
 
-## Suggested Next Improvements
+## Academic Evaluation Notes
 
-- Add proper backend authentication and database storage.
-- Fix dashboard data-binding to use stored student object consistently.
-- Replace placeholder links/content with real academic resources and CMS-driven updates.
-- Improve responsive behavior and accessibility (landmarks, ARIA, keyboard flow).
-- Add deployment instructions (GitHub Pages, Netlify, or school hosting).
-
-## License
-
-No license file is currently included in this repository. Add one if distribution terms are needed.
+This project is suitable for academic frontend review because it demonstrates:
+- Information architecture refactoring
+- Content-focused UX design
+- Responsive, accessible static pages
+- Clear separation of structure (HTML), style (CSS), and interactions (JS)

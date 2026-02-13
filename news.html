@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>News & Announcements | KIKAI Girls High School</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="top-bar"><img src="images/logo.jpg" alt="KIKAI Girls High School logo" class="logo" /><div class="brand"><h1>KIKAI Girls High School</h1><p>News, announcements, and school magazine updates</p></div></div>
+    <div class="nav-wrap"><nav class="site-nav" aria-label="Main navigation"><button id="navToggle" class="nav-toggle" aria-expanded="false" aria-controls="navLinks">Menu</button><ul id="navLinks" class="nav-links"><li><a href="index.html">Home</a></li><li><a href="about.html">About the School</a></li><li><a href="academics.html">Academics</a></li><li><a href="admissions.html">Admissions</a></li><li><a href="school-life.html">School Life</a></li><li><a href="news.html">News</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="library-elearning.html">Library & E-Learning</a></li><li><a href="downloads.html">Downloads</a></li><li><a href="contact.html">Contact</a></li></ul></nav></div>
+  </header>
+
+  <main class="container">
+    <section class="page-intro">
+      <h2 class="page-title">News & Announcements</h2>
+      <p>Browse school updates by category. This page acts as a public school magazine and notice board.</p>
+      <div class="filter-row" aria-label="Filter articles by category">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="academics">Academics</button>
+        <button class="filter-btn" data-filter="events">Events</button>
+        <button class="filter-btn" data-filter="sports">Sports</button>
+        <button class="filter-btn" data-filter="announcements">Announcements</button>
+      </div>
+    </section>
+
+    <section class="news-grid">
+      <article class="news-card" data-category="academics">
+        <img src="images/celebration.jpg" alt="Students receiving academic awards" />
+        <div class="news-body">
+          <p class="article-meta">15 February 2026 | Academics</p>
+          <h3>Academic Awards Ceremony Highlights</h3>
+          <p>Top-performing students were recognized during the annual awards and recognition day.</p>
+          <a href="article-awards-2026.html">Read full article</a>
+        </div>
+      </article>
+
+      <article class="news-card" data-category="sports">
+        <img src="images/handball.jpg" alt="Handball team training on school grounds" />
+        <div class="news-body">
+          <p class="article-meta">10 February 2026 | Sports</p>
+          <h3>Handball Team Begins County Preparations</h3>
+          <p>The handball squad has started an intensive training camp ahead of county competition.</p>
+          <a href="article-handball-camp.html">Read full article</a>
+        </div>
+      </article>
+
+      <article class="news-card" data-category="announcements">
+        <img src="images/week.jpg" alt="Parents and teachers in a school meeting" />
+        <div class="news-body">
+          <p class="article-meta">08 February 2026 | Announcement</p>
+          <h3>Parent Consultation Day Scheduled</h3>
+          <p>Parents and guardians are invited to a consultation session on 6 March 2026 at 10:00 AM.</p>
+          <a href="article-parent-day.html">Read full article</a>
+        </div>
+      </article>
+
+      <article class="news-card" data-category="events">
+        <img src="images/rteam.jpg" alt="Students in a debate and leadership activity" />
+        <div class="news-body">
+          <p class="article-meta">02 February 2026 | Events</p>
+          <h3>Leadership and Debate Week Report</h3>
+          <p>Students participated in public speaking, debate rounds, and peer leadership workshops.</p>
+          <a href="article-leadership-week.html">Read full article</a>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="footer-inner"><p>&copy; 2026 KIKAI Girls High School</p></div></footer>
+  <script src="js/script.js"></script>
+</body>
+</html>
